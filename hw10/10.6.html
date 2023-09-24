@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк,
+    // третій вмиіст ячеєк.
+    // При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+    // (Додатковачастина для завдання)
+
+    let form2 = document.createElement('form');
+    let input2 = document.createElement('input');
+    input2.type = 'number';
+    let input3 = document.createElement('input');
+    input3.type = 'number';
+    let input4 = document.createElement('input');
+    input4.type = 'number';
+
+    let button22 = document.createElement('button');
+    button22.innerText = 'do something';
+    form2.append(input4,input2,input3,button22);
+
+    document.body.appendChild(form2);
+
+    form2.onsubmit = function (e) {
+        e.preventDefault();
+
+        let ofice = document.createElement('ofice');
+            for ( i = 0; i< input2.value; i++){
+                   let popo = document.createElement('popo');
+            for (p = 0; p< input3.value; p++){
+                let pipi = document.createElement('pipi');
+                pipi.innerText = input4.value;
+                popo.appendChild(pipi);
+            }
+            ofice.appendChild(popo);
+        }
+        document.body.appendChild(ofice);
+    };
+
+
+
+</script>
+</body>
+</html>
