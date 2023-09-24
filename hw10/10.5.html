@@ -5,10 +5,34 @@
     <title>Title</title>
 </head>
 <body>
-<script src="1111.js">
+
+
+<script>
   //створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на
   //кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
   //та повідомити про це користувача
+
+  let form = document.createElement('form');
+  let input = document.createElement('input');
+
+  input.type = 'number';
+
+  let button2 = document.createElement('button');
+
+  button2.innerText = 'lets go';
+  form.append(input, button2);
+  document.body.appendChild(form);
+
+  form.onsubmit = function (e) {
+      e.preventDefault();
+      if (input.value > 18){
+          alert('good');
+      }
+      else {
+          alert('bad')
+      }
+  }
+
 </script>
 </body>
 </html>
