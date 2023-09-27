@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let url = new URL(location.href);
+    console.log(url);
+    let userJSON = url.searchParams.get('value');
+    let user = JSON.parse(userJSON);
+    document.body(user);
+
+</script>
+</body>
+</html>
